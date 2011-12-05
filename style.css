@@ -1,0 +1,343 @@
+/**
+ * Configurações de estilo de toda a página, incluindo tipografia, margens, etc.
+ * Também inclui classes de estilo que são reusadas muitas vezes.
+ * @author Leandro Alonso
+ */
+
+body {
+	font: 0.8em "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #107FC9;
+	outline: none;
+}
+
+img {
+	border: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.clear {
+	clear: both;
+}
+
+/**
+ * Estilo da barra que se encontra no topo do MyMail
+ * @author Leandro Alonso
+ */
+
+#topbar {
+	background: url('img/topbar_bg.gif');
+	padding-top: 7px;
+	height: 24px;
+	border-bottom: 1px solid #0356CD;
+	margin-bottom: 5px;
+	color: #fff;
+}
+
+#topbar a {
+	color: #fff;
+}
+
+#canais {
+	float: left;
+}
+
+#canais ul li {
+	float: left;
+	margin-left: 10px;
+}
+
+#user {
+	float: right;
+	padding-right: 10px;
+}
+
+/**
+ * Configurações de estilo do header. Aonde está o logo da aplicação.
+ */
+
+#header {
+	height: 80px;
+	padding-top: 20px;
+}
+
+#logo {
+	display: block;
+	width: 171px;
+	height: 63px;
+	background: url('img/logo.gif') no-repeat;
+	margin: 0 0 0 20px;
+}
+
+#content {
+	margin: 0 0 0 10px;
+	position: relative;
+	min-height: 320px;
+}
+
+/**
+ * Configurações de estilo do menu de opções (Escrever Email, Inbox, etc)
+ */
+
+#menu {
+	float: left;
+	width: 20%;
+	background: url('img/nav_bg.gif');
+	-moz-border-radius: 10px;
+	padding: 10px;
+}
+
+#menu ul li {
+	height: 20px;
+	margin-bottom: 5px;
+	padding: 3px;
+}
+
+#menu ul li a {
+	display: block;
+	height: 19px;
+	padding: 1px 0 0 25px;
+	color: #107FC9;
+}
+
+.escrever {
+	background: url('img/escrever.png') no-repeat;
+}
+
+.inbox {
+	background: url('img/inbox.png') no-repeat;
+}
+
+.enviados {
+	background: url('img/enviados.png') no-repeat;
+}
+
+.rascunhos {
+	background: url('img/rascunhos.png') no-repeat;
+}
+
+.todos {
+	background: url('img/todos.png') no-repeat;
+}
+
+.spam {
+	background: url('img/spam.png') no-repeat;
+}
+
+#menu ul li.sel {
+	background: #a5b4ca url('img/sel.gif');
+	-moz-border-radius: 5px 0 0 5px;
+}
+
+#menu ul li.sel a {
+	color: #fff;
+	text-shadow: 1px 1px 1px #07436A;
+}
+
+/**
+ * Configurações de estilo do container.
+ */
+
+#container {
+	border: 3px solid #a5b4ca;
+	width: 77%;
+	position: absolute;
+	right: 0;
+	margin-right: 19px;
+	background: #fff;
+	-moz-border-radius: 10px;
+	min-height: 300px;
+}
+
+/**
+ * Configurações de estilo dos botões
+ */
+
+.button {
+	border: 1px solid #BBBBBB;
+	-moz-border-radius: 3px;
+	background: -moz-linear-gradient(center top , #F9F9F9, #E3E3E3);
+	padding: 3px 6px;
+	text-align: center;
+	display: inline-block;
+	font-size: 0.85em;
+	cursor: default;
+}
+
+.button.lef {
+	-moz-border-radius: 3px 0 0 3px;
+}
+
+.button.mid {
+	-moz-border-radius: 0;
+	border-left: 1px solid #fff;
+}
+
+.button.rig {
+	-moz-border-radius: 0 3px 3px 0;
+	border-left: 1px solid #fff;
+}
+
+/**
+ * Configurações de estilo da Inbox.
+ */
+
+#inbox {
+	
+}
+
+.emails {
+	min-height: 210px;
+}
+
+.sidebar {
+	height: 45px;
+	padding: 5px 5px 0 5px;
+}
+
+.sidebar.top {
+	background: url('img/sidebar.gif');
+	-moz-border-radius: 10px 10px 0 0;
+}
+
+.sidebar.bottom {
+	background: url('img/sidebar_bottom.gif');
+	-moz-border-radius: 0 0 10px 10px;
+	bottom: 0;
+	position: relative;
+}
+
+.select {
+	margin: 3px 0;
+	font-size: 0.9em;
+}
+
+.atualizar {
+	display: inline-block;
+	margin-left: 3px;
+	font-size: 0.9em;
+}
+
+.email {
+	border-bottom: 1px solid #ddd;
+	padding: 4px 0 3px;
+	background: #EDEDF4;
+	cursor: pointer;
+}
+
+.email div {
+	display: inline-block;
+}
+
+.grippy {
+	background: url('img/grippy.png') no-repeat;
+	width: 6px;
+	height: 14px;
+	margin-left: 3px;
+	cursor: move;
+}
+
+.selectmail {
+	height: 10px;
+}
+
+.selectmail input {
+	margin: 0;
+	vertical-align: top;
+}
+
+.from {
+	width: 25%;
+	overflow: hidden;
+}
+
+.excerpt {
+	width: 60%;
+	overflow: hidden;
+}
+
+.excerpt span {
+	display: block;
+	width: 300%;
+}
+
+.excerpt em {
+	font-style: normal;
+	color: #888;
+}
+
+.date {
+	float: right;
+	padding-right: 5px;
+}
+
+.naolido {
+	font-weight: bold;
+	background: #fff;
+}
+
+.naolido em {
+	font-weight: normal;
+}
+
+/**
+ * Estilo do footer (rodapé)
+ * @author Leandro Alonso
+ */
+
+#footer {
+	width: 77%;
+	float: right;
+	text-align: center;
+}
+
+#footer p {
+	margin: 8px 0;
+}
+
+#usando {
+	font-weight: bold;
+	color: #2A56AA;
+}
+
+.info {
+	font-size: 0.9em;
+}
+
+    /**
+     * Estilo da exibição de um e-mail
+     * @author Leandro Alonso
+     */
+
+    #contentmail h1 {
+        margin: 10px 0 10px 15px;
+    }
+
+    #contentmail .body {
+        margin: 0 15px 10px;
+        padding: 5px;
+    }
+
+    .remetente {
+        color: #777;
+    }
+
+    .remetente strong {
+        color: #444;
+    }
+ .draggable{
+	color: #222;
+	padding: 5px;
+	width: 200px;
+	background-color: #FF0;
+	z-index: 1000;
+}

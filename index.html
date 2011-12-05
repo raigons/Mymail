@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>MyMail</title>
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+	<script src="js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-ui-1.8.1.custom.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mymail.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/funcoes.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/visualizacaoEmail.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/manipulacaoEmails.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+<div id="topbar">
+	
+	<div id="canais">
+		<ul>
+			<li>MyMail</li>
+			<li><a href="#calendario">Calendário</a></li>
+			<li><a href="#documentos">Documentos</a></li>
+			<li><a href="http://www.orkut.com/">Yakult</a></li>
+			<li><a href="#outros">Outros <small>▼</small></a></li>
+		</ul>
+	</div>
+	
+	<div id="user">
+		<strong>usuario@minicurso.com</strong> | <a href="#configuracoes">Configurações</a> | <a href="#sair">Sair</a>
+	</div>
+	
+</div>
+
+<div id="header">
+	<a href="#home" id="logo"></a>
+</div>
+
+<div id="content">
+	
+	<!-- Menu -->
+	<div id="menu">
+		<ul>
+			<li><a href="#escrever" class="escrever">Escrever Email</a></li>
+			<li class="sel"><a href="#inbox" class="inbox">Inbox</a></li>
+			<li><a href="#enviados" class="enviados">Emails Enviados</a></li>
+			<li><a href="#rascunhos" class="rascunhos">Rascunhos</a></li>
+			<li><a href="#todos" class="todos">Todos Emails</a></li>
+			<li><a href="#spam" class="spam">Spam</a></li>
+		</ul>
+	</div>
+	
+	<div id="container">
+		
+		<!-- Escrever email -->
+		<div id="escrever" class="sec"></div>
+		<!-- Visualização de emails -->
+		<div id="email" class="sec">           
+            <div class="sidebar top">
+                <div>
+                    <div class="button deletar">Deletar</div>
+                   
+                    <div class="button moveinbox">Mover pra Inbox</div>
+                   
+                    <div class="atualizar"><a href="#atualizar">Atualizar</a></div>
+                </div>
+               
+                <div class="select">Selecionar: <a href="#todos" class="todosemails">Todos</a>, <a href="#nenhum" class="nenhum">Nenhum</a>, <a href="#lidos" class="lidos">Lidos</a>, <a href="#naolidos" class="naolidos">Não Lidos</a></div>
+            </div>
+           
+            <div id="contentmail" class="emails">
+                <!--<h1>Titulo do e-mail</h1>
+               
+                <div class="body">
+                    <div>
+                        <div class="remetente">De <strong>Fulano</strong> fulano@ufla.br para <strong>Ciclano</strong> ciclano@ufla.br</div>
+                    </div>
+                    <div class="message">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>-->
+				
+            </div>
+           
+            <div class="sidebar bottom">
+                <div>
+                    <div class="button deletar">Deletar</div>
+                   
+                    <div class="button moveinbox">Mover pra Inbox</div>
+                   
+                    <div class="atualizar"><a href="#atualizar">Atualizar</a></div>
+                </div>
+               
+                <div class="select">Selecionar: <a href="#todos" class="todosemails">Todos</a>, <a href="#nenhum" class="nenhum">Nenhum</a>, <a href="#lidos" class="lidos">Lidos</a>, <a href="#naolidos" class="naolidos">Não Lidos</a></div>
+            </div>           
+        </div>
+		
+		<!-- Caixa de entrada -->
+		<div id="inbox" class="sec">
+			
+			<div class="sidebar top">
+				<div>
+					<div class="button lef arquivar">Arquivar</div><div class="button mid spam">Spam</div><div class="button rig deletar">Deletar</div>
+					
+					<div class="atualizar"><a href="#atualizar">Atualizar</a></div>
+				</div>
+				
+				<div class="select">Selecionar: <a href="#todos" class="todosemails">Todos</a>, <a href="#nenhum" class="nenhum">Nenhum</a>, <a href="#lidos" class="lidos">Lidos</a>, <a href="#naolidos" class="naolidos">Não Lidos</a></div>
+			</div>
+			
+			<div class="emails">
+											
+			</div>
+			
+			<div class="sidebar bottom">
+				<div>
+					<div class="button lef arquivar">Arquivar</div><div class="button mid spam">Spam</div><div class="button rig deletar">Deletar</div>
+					
+					<div class="atualizar"><a href="#atualizar">Atualizar</a></div>
+				</div>
+				
+				<div class="select">Selecionar: <a href="#todos" class="todosemails">Todos</a>, <a href="#nenhum" class="nenhum">Nenhum</a>, <a href="#lidos" class="lidos">Lidos</a>, <a href="#naolidos" class="naolidos">Não Lidos</a></div>
+			</div>
+			
+		</div>
+		
+		<!-- Emails enviados -->
+		<div id="enviados" class="sec">
+			
+			<div class="sidebar top">
+				<div>
+					<div class="button lef arquivar">Arquivar</div><div class="button mid spam">Spam</div><div class="button rig deletar">Deletar</div>
+					
+					<div class="button moveinbox">Mover pra Inbox</div>
+					
+					<div class="atualizar"><a href="#atualizar">Atualizar</a></div>
+				</div>
+				
+				<div class="select">Selecionar: <a href="#todos" class="todosemails">Todos</a>, <a href="#nenhum" class="nenhum">Nenhum</a>, <a href="#lidos" class="lidos">Lidos</a>, <a href="#naolidos" class="naolidos">Não Lidos</a></div>
+			</div>
+			
+			<div class="emails"></div>
+			
+			<div class="sidebar bottom">
+				<div>
+					<div class="button lef arquivar">Arquivar</div><div class="button mid spam">Spam</div><div class="button rig deletar">Deletar</div>
+					
+					<div class="button moveinbox">Mover pra Inbox</div>
+					
+					<div class="atualizar"><a href="#atualizar">Atualizar</a></div>
+				</div>
+				
+				<div class="select">Selecionar: <a href="#todos" class="todosemails">Todos</a>, <a href="#nenhum" class="nenhum">Nenhum</a>, <a href="#lidos" class="lidos">Lidos</a>, <a href="#naolidos" class="naolidos">Não Lidos</a></div>
+			</div>
+			
+		</div>
+		
+		<!-- Rascunhos -->
+		<div id="rascunhos" class="sec">
+			
+			<div class="sidebar top">
+				<div>
+					<div class="button descartar">Descartar Rascunhos</div>
+					
+					<div class="button moveinbox">Mover pra Inbox</div>
+					
+					<div class="atualizar"><a href="#atualizar">Atualizar</a></div>
+				</div>
+				
+				<div class="select">Selecionar: <a href="#todos" class="todosemails">Todos</a>, <a href="#nenhum" class="nenhum">Nenhum</a>, <a href="#lidos" class="lidos">Lidos</a>, <a href="#naolidos" class="naolidos">Não Lidos</a></div>
+			</div>
+			
+			<div class="emails"></div>
+			
+			<div class="sidebar bottom">
+				<div>
+					<div class="button descartar">Descartar Rascunhos</div>
+					
+					<div class="button moveinbox">Mover pra Inbox</div>
+					
+					<div class="atualizar"><a href="#atualizar">Atualizar</a></div>
+				</div>
+				
+				<div class="select">Selecionar: <a href="#todos" class="todosemails">Todos</a>, <a href="#nenhum" class="nenhum">Nenhum</a>, <a href="#lidos" class="lidos">Lidos</a>, <a href="#naolidos" class="naolidos">Não Lidos</a></div>
+			</div>
+			
+		</div>
+		
+		<!-- Todos os Emails -->
+		<div id="todos" class="sec">
+			
+			<div class="sidebar top">
+				<div>
+					<div class="button lef arquivar">Arquivar</div><div class="button mid spam">Spam</div><div class="button rig deletar">Deletar</div>
+					
+					<div class="button moveinbox">Mover pra Inbox</div>
+					
+					<div class="atualizar"><a href="#atualizar">Atualizar</a></div>
+				</div>
+				
+				<div class="select">Selecionar: <a href="#todos" class="todosemails">Todos</a>, <a href="#nenhum" class="nenhum">Nenhum</a>, <a href="#lidos" class="lidos">Lidos</a>, <a href="#naolidos" class="naolidos">Não Lidos</a></div>
+			</div>
+			
+			<div class="emails"></div>
+			
+			<div class="sidebar bottom">
+				<div>
+					<div class="button lef arquivar">Arquivar</div><div class="button mid spam">Spam</div><div class="button rig deletar">Deletar</div>
+					
+					<div class="button moveinbox">Mover pra Inbox</div>
+					
+					<div class="atualizar"><a href="#atualizar">Atualizar</a></div>
+				</div>
+				
+				<div class="select">Selecionar: <a href="#todos" class="todosemails">Todos</a>, <a href="#nenhum" class="nenhum">Nenhum</a>, <a href="#lidos" class="lidos">Lidos</a>, <a href="#naolidos" class="naolidos">Não Lidos</a></div>
+			</div>
+			
+		</div>
+		
+		<!-- Spams -->
+		<div id="spam" class="sec">
+			
+			<div class="sidebar top">
+				<div>
+					<div class="button lef deletar">Deletar</div><div class="button rig nospam">Não é spam</div>
+					
+					<div class="button moveinbox">Mover pra Inbox</div>
+					
+					<div class="atualizar"><a href="#atualizar">Atualizar</a></div>
+				</div>
+				
+				<div class="select">Selecionar: <a href="#todos" class="todosemails">Todos</a>, <a href="#nenhum" class="nenhum">Nenhum</a>, <a href="#lidos" class="lidos">Lidos</a>, <a href="#naolidos" class="naolidos">Não Lidos</a></div>
+			</div>
+			
+			<div class="emails"></div>
+			
+			<div class="sidebar bottom">
+				<div>
+					<div class="button lef deletar">Deletar</div><div class="button rig nospam">Não é spam</div>
+					
+					<div class="button moveinbox">Mover pra Inbox</div>
+					
+					<div class="atualizar"><a href="#atualizar">Atualizar</a></div>
+				</div>
+				
+				<div class="select">Selecionar: <a href="#todos" class="todosemails">Todos</a>, <a href="#nenhum" class="nenhum">Nenhum</a>, <a href="#lidos" class="lidos">Lidos</a>, <a href="#naolidos" class="naolidos">Não Lidos</a></div>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="clear"></div>
+	
+</div>
+
+<div id="footer">
+	<p id="usando">Você está usando 23 MB dos seus 7000 MB.</p>
+	<p class="info">Interface fictícia desenvolvida para o minicurso de jQuery na Universidade Federal de Lavras (UFLA).</p>
+	<p class="info"><a href="http://leandroalonso.com/">http://leandroalonso.com/</a> | <a href="http://twitter.com/leandrow">@leandrow</a> | <a href="http://twitter.com/raigons">@raigons</a></p>
+</div>
+
+</body>
+</html>
